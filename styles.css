@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background: linear-gradient(to right, rgb(83, 83, 123),rgb(128, 127, 127));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 100vh;
+}
+.container {
+    width: 50vw;
+    height: 60vh;
+    background: transparent;
+    text-align: center;
+}
+
+.container h1{
+    font-size:3rem;
+}
+.container span{
+    color: red;
+    display: inline-block;
+    padding-bottom: 3px;
+    text-shadow: 2px 2px 5px black;
+    animation:jumpings 1.4s ease-in infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+
+
+@keyframes jumpings {
+    0%,40%,100%{
+        transform: translateY(0);
+        color: red;
+    }
+
+    
+    20%{
+        transform: translateY(-20px);
+        color: rgb(38, 69, 85);
+    }
+}
+
+.container textarea{
+    margin: 20px 0;
+    width: 100%;
+    border: none;
+    background: rgb(38, 69, 85);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: white;
+    resize: none;
+    
+}
+
+.container textarea:hover{
+    background: rgb(44, 44, 44);
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.buttons button{
+    padding: 10px 30px;
+    background: red;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover{
+    transform: scale(1.2);
+    margin-left: 5px;
+    background: tomato;
+}
+
+.buttons select{
+    flex: 1;
+    border: none;
+    border-radius: 20px;
+    background: rgb(38,69,85);
+    margin: 0  12px;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.buttons select:hover{
+    border: 1px solid white;
+    background: black;
+}
